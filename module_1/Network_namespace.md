@@ -53,8 +53,8 @@
 5. **From the new network namesapce** Configure the network interfaces.
    ```bash
      # Assign ip address
-     ip addr add 192.168.15.2/24 dev eth0
-     ip link set eth0 up
+     ip addr add 192.168.15.2/24 dev veth-ns
+     ip link set veth-ns up
      ip link set lo up
    ```
 6. View the network interfaces in the new namespace:
@@ -91,7 +91,6 @@
 
    ```bash
    exit
-   sudo ip link delete veth-host
    # uncomment below if the bonus section was done
    #sudo sysctl -w net.ipv4.ip_forward=0
    #sudo iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE

@@ -19,8 +19,19 @@
 2. Install Docker (Verify the "Use WSL 2" checkbox is checked)
 
 ## 4. Kubectl Install
-1. Run PowerShell as admin and run the command: `choco install kubernetes-cli`
-2. Verify the installation by running the command: `kubectl version --client`
-3. Run the following command:
+1. Run PowerShell as admin and run the command:
    ```powershell
-   cd ~; mkdir .kube; cd .kube; New-Item config -type file
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+2. Run PowerShell as admin and run the command:
+   ```powershell
+   choco install kubernetes-cli
+   ```
+3. Verify the installation by running the command: 
+   ```powershell
+   kubectl version --client
+   ```
+5. Run the following command:
+    ```powershell
+    cd ~; mkdir .kube; cd .kube; New-Item config -type file
+    ```
