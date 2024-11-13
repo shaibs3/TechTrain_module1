@@ -62,6 +62,9 @@
    ip a
    ```
 7. Rename veth-ns to eth0 (List the network interface to verify it was changed successfully)
+   ```bash
+   <try to find the command yourself>
+   ```
 
 - Test network connectivity from the new namespace:
    ```bash
@@ -70,7 +73,7 @@
 
 
 <details>
-  <summary>Bonus section. Connect the container to the internet</summary>
+  <summary>Bonus - Connect the container to the internet (This is a challenging one!)</summary>
 
 - Setup the host:
    - **From the host shell**:
@@ -79,7 +82,22 @@
       sudo sysctl -w net.ipv4.ip_forward=1
       sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
       ```
-- **Question** Which command is needed to be added on the new network namespace so it will have full connectivity?
+   <details>
+     <summary>Add the missing command to the network namespace</summary>
+
+  - **Inside the network namespace**
+      ```bash
+      <Put the missing command. if you give up you can find the command in the next section :)>
+      ```
+   </details>
+   <details>
+     <summary>Reveal the answer</summary>
+
+   - **Inside the network namespace**
+       ```bash
+       ip route add default via 192.168.15.1
+       ```
+   </details>
 
 2. **From the new network namesapce** Check connectivity to the internet:
     ```bash
