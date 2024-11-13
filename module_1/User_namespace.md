@@ -33,7 +33,8 @@
 4. **Question** Did the command succeed?
 5. **Question** Does the new direcotry exist on the host?
 6. **Question** Why did the user in the new user namespace managed to write to the host filesystem?
-7. Exit the namespace.
+7. **Question** is there a security vulnerability in this setup??
+8. Exit the namespace.
    ```bash 
    rm -rf /test-directory
    exit
