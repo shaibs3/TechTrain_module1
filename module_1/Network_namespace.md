@@ -19,13 +19,13 @@
     - `--mount-proc`: Mounts a new `/proc` filesystem inside the namespace.
     - `bash`: Starts a new shell inside the namespace.
 
-2. List the network interfaces available in the new namespace.
+2. List the network interfaces available in the network namespace.
    ```bash
    ip a
    ```  
    **Question** Do you see the same network interfaces as on the host?
 
-#### 2. Create network connectivity between the host and the new namespace
+#### 2. Create network connectivity between the host and the network namespace
 1. **From the host shell** Create a veth pair:
    ```bash
    sudo ip link add veth-host type veth peer name veth-ns
@@ -57,7 +57,7 @@
      ip link set veth-ns up
      ip link set lo up
    ```
-6. View the network interfaces in the new namespace:
+6. View the network interfaces in the network namespace:
    ```bash
    ip a
    ```
@@ -66,7 +66,7 @@
    <try to find the command yourself>
    ```
 
-- Test network connectivity from the new namespace:
+- Test network connectivity from the network namespace:
    ```bash
    ping 192.168.15.1
    ```
