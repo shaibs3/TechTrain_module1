@@ -12,12 +12,11 @@
 
 1. Create a new user namespace.
    ```bash
-   sudo unshare --user --mount --map-root-user bash
+   sudo unshare --user --map-root-user bash
    ```
 
    **Arguments Explanation**:
    - `--user`: Unshares the user namespace.
-   - `--mount`: Unshares the mount namespace to ensure isolation.
    - `--map-root-user`: Maps your user ID (UID 0) to the root user (UID 0) inside the namespace.
    - `bash`: Spawns a new shell inside the namespace.
 
