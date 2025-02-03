@@ -6,6 +6,7 @@
 ---
 
 ### Network Namespace
+Open an ubuntu shell
 
 **Exercise**:
 
@@ -26,7 +27,7 @@
    **Question** Do you see the same network interfaces as on the host?
 
 #### 2. Create network connectivity between the host and the network namespace
-1. **From the host shell** Create a veth pair:
+1. **Open a new ubuntu shell (It will be referred later as the host shell)** Create a veth pair:
    ```bash
    sudo ip link add veth-host type veth peer name veth-ns
    ```

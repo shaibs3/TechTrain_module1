@@ -8,7 +8,7 @@
 ### Process Namespace
 
 #### 1. Create a new network namespace
-
+Open an ubuntu shell
 1. View the processes running on the host.
    ```bash
    ps aux

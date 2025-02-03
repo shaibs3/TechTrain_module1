@@ -9,6 +9,7 @@
 
 
 #### 1. Create a new User namespace with root privileges
+Open an ubuntu shell
 
 1. Create a new user namespace.
    ```bash
