@@ -33,12 +33,12 @@ Open an ubuntu shell
    ```bash
    sleep 360 &
    ```
-2. **Question** - What do you think will be the relationship between the bash process that created the namespace and the new process created in step 5?
+2. **Question** - What do you think will be the relationship between the bash process that created the namespace and the new process created in step 1?
    - To view the process tree and see the processes relationship type the following:
       ```bash
       pstree -tpln
       ```
-3. **Question** - Is the process created in step 6 visible on the host?
+3. **Question** - Is the process created in step 1 visible on the host?
 #### Cleanup
 1. type:
    ```bash

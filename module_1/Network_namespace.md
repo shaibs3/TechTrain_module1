@@ -41,7 +41,7 @@ Open an ubuntu shell
    echo $$
    ```
 
-3. **From the host shell** Move `veth-ns` to the PID from step 4:
+3. **From the host shell** Move `veth-ns` to the PID from step 2:
    ```bash
    sudo ip link set veth-ns netns <PID>
    ```
