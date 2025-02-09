@@ -31,7 +31,7 @@ Open an ubuntu shell
     mkdir /test-directory
     ```
 4. **Question** Did the command succeed?
-5. **Question** Does the new direcotry exist on the host?
+5. **Question** Does the new directory exists outside the new user namespace? (You can open a second terminal to verify)
 6. **Question** Why did the user in the new user namespace managed to write to the host filesystem?
 7. **Question** is there a security vulnerability in this setup??
 8. Exit the namespace.
@@ -59,7 +59,7 @@ Open an ubuntu shell
     ```bash
     id
     ```  
-4. **Question** Is the running user is root user?
+4. **Question** Is the running user a root user?
 
 5. Experiment with privileged operations:
     ```bash
